@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+/* * globals **/
+
+body {
+  margin: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+  /* background-color: red; */
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  margin-inline: auto;
+}
+
+/** variables **/
+:root {
+  /** colors **/
+  --Bright-Red: hsl(12, 88%, 59%);
+  --Dark-Blue: hsl(228, 39%, 23%);
+
+  --Dark-Grayish-Blue: hsl(227, 12%, 61%);
+  --Very-Dark-Blue: hsl(233, 12%, 13%);
+  --Very-Pale-Red: hsl(13, 100%, 96%);
+  --Vary-Light-Gray: hsl(0, 0%, 98%);
+
+  /** ========== font ========== **/
+
+  /** ===== family ===== **/
+
+  /** ===== size =====**/
+  /** heading **/
+  --fnsz-hd-2: 2.25rem;
+
+  /** ===== color =====**/
+  /** heading **/
+  --color-hd-2: var(--Dark-Blue);
+
+  /** p**/
+  --color-p: var(--Dark-Grayish-Blue);
+
+  /** links **/
+  --color-links: var(--Dark-Blue);
+
+  /** ========== spacing ========== **/
+
+  /** ===== header ===== **/
+
+  /** nav **/
+  /** top: 41px to ?, sides: 22px to ?  158px**/
+  --spc-pd-sides-nav: clamp(1.38rem, calc(-1.62rem + 12.77vw), 9.88rem);
+  --spc-pd-top-nav: 2.563rem;
+  --spc-mrg-nav-sides: 1.375rem;
+
+  /** ===== section ===== **/
+
+  --spc-pd-sides-sctn: 1.875rem;
+
+  /** hero **/
+  /** top: 48px to ?, bottom: 48px to ? **/
+  --spc-mrg-top-hero: 3rem;
+
+  /** content  **/
+  /** general-sides: 30px to 158px, bottom-bring-everyone: 96px to ?, bottom-different:  30px to ?  **/
+  --spc-mrg-bottom-brg: 5.875rem;
+
+  /** content-2 **/
+  /** left: 12px to ? 158px, rigth: 24px to ? 158px, bottom: 48px to ?  **/
+
+  /** comments **/
+  /** top: 78px to ? **/
+  /** sides: 44px to ? 158px, bottom: 48px to ?** /
+
+  /** ========== templeating ========== **/
+
+  /** ===== bnts ===== **/
+
+  /** === btn started === **/
+  /** bgk **/
+  --bgk-btn-started: var(--Bright-Red);
+  /** color **/
+  --color-btn-started: var(--Vary-Light-Gray);
+
+  /** === span === **/
+  /** bgk **/
+  --bkg-span-points: var(--Bright-Red);
+  /** color **/
+  --color-span-points: var(--Vary-Light-Gray);
+}
+
+/** ===== typography ===== **/
+
+h2 {
+  font-size: var(--fnsz-hd-2);
+  color: var(--color-hd-2);
+}
+
+p {
+  color: var(--color-p);
+  line-height: 1.5rem;
+}
+
+a {
+  color: var(--color-links);
+  font-weight: 700;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  a {
+    font-weight: 500;
+  }
+}
+
+.text-aling {
+  text-align: center;
+}
+
+/** ===== spacing ===== **/
+
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+/** ===== layouts ===== **/
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.aling-center {
+  align-items: center;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.aling-start {
+  align-items: flex-start;
+}
+
+/** ========== components ==========**/
+
+/** ===== btns =====**/
+
+.btn-started {
+  background-color: var(--bgk-btn-started);
+  color: var(--color-btn-started);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+
+/** ====== span ======**/
+.span-points {
+  background-color: var(--bkg-span-points);
+  color: var(--color-span-points);
+  padding: 0.5rem 1.4rem;
+  border-radius: 5rem;
+}
+
+/** ========== container ========== **/
+.container {
+  padding: 0 var(--spc-pd-sides-sctn);
+}
+
+/** ========== own styles =========* */
+
+/** ===== hero ===== **/
+
+/** nav **/
+
+nav {
+  padding: 0 var(--spc-pd-sides-nav);
+  padding-top: var(--spc-pd-top-nav);
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar-links {
+  background-color: white;
+  border-radius: 0.2rem;
+  margin: 0 var(--spc-mrg-nav-sides);
+  margin-top: 2rem;
+  padding: 2rem 0;
+  gap: 1.5rem;
+  display: none;
+}
+
+/** navdesktop **/
+
+.navbar-desktop {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .navbar-desktop {
+    display: flex;
+  }
+}
+
+.navbar-links-desktop {
+  gap: 1rem;
+}
+
+/** ===== main ===== **/
+
+.hero {
+  margin-top: var(--spc-mrg-top-hero);
+}
+
+.hero-img-container {
+  margin-inline: auto;
+}
+
+/** questions **/
+
+.bring {
+  margin-bottom: var(--spc-mrg-bottom-brg);
+}
